@@ -33,6 +33,42 @@ public class PaisResource {
 		return ResponseEntity.ok().body(pais);
 	}
 	
+	@RequestMapping(value="/nome" ,method=RequestMethod.GET)
+	public ResponseEntity<Pais> findNome(@RequestParam(value = "value") String nome) {
+		
+		Pais pais = service.findByNome(nome);
+		return ResponseEntity.ok().body(pais);
+	}
+	
+	@RequestMapping(value="/capital" ,method=RequestMethod.GET)
+	public ResponseEntity<Pais> findByCapital(@RequestParam(value = "value") String capital) {
+		
+		Pais pais = service.findByCapital(capital);
+		return ResponseEntity.ok().body(pais);
+	}
+	
+	@RequestMapping(value="/regiao" ,method=RequestMethod.GET)
+	public ResponseEntity<Pais> findbyRegiao(@RequestParam(value = "value") String regiao) {
+		
+		Pais pais = service.findByRegiao(regiao);
+		return ResponseEntity.ok().body(pais);
+	}
+	
+	@RequestMapping(value="/subregiao" ,method=RequestMethod.GET)
+	public ResponseEntity<Pais> findBySubRegiao(@RequestParam(value = "value") String subregiao) {
+		
+		Pais pais = service.findBySubRegiao(subregiao);
+		return ResponseEntity.ok().body(pais);
+	}
+	
+	@RequestMapping(value="/area" ,method=RequestMethod.GET)
+	public ResponseEntity<Pais> findByArea(@RequestParam(value = "value") String area) {
+		
+		Pais pais = service.findByArea(area);
+		return ResponseEntity.ok().body(pais);
+	}
+	
+	
 	@RequestMapping(method=RequestMethod.GET)
 	public ResponseEntity<List<Pais>> findAll() {
 		

@@ -25,6 +25,51 @@ public class PaisService {
 		return usr.orElseThrow(() -> new ObjectNotFoundException("Pais nao encontrado id = " + id));
 	}
 	
+	public Pais findByNome( String nome) {
+		Pais pais = repo.findByNome(nome);
+
+		if(pais == null) {
+			throw new  ObjectNotFoundException("Pais nao encontrado nome = " + nome);
+		}
+		return pais;
+	}
+	
+	public Pais findByCapital( String capital) {
+		Pais pais = repo.findByCapital(capital);
+
+		if(pais == null) {
+			throw new  ObjectNotFoundException("Capital nao encontrada nome = " + capital);
+		}
+		return pais;
+	}
+	
+	public Pais findByRegiao( String regiao) {
+		Pais pais = repo.findByRegiao(regiao);
+
+		if(pais == null) {
+			throw new  ObjectNotFoundException("Regiao nao encontrada nome = " + regiao);
+		}
+		return pais;
+	}
+	
+	public Pais findBySubRegiao( String subRegiao) {
+		Pais pais = repo.findBySubRegiao(subRegiao);
+
+		if(pais == null) {
+			throw new  ObjectNotFoundException("SubRegiao nao encontrado nome = " + subRegiao);
+		}
+		return pais;
+	}
+	public Pais findByArea( String area) {
+		Pais pais = repo.findByArea(area);
+
+		if(pais == null) {
+			throw new  ObjectNotFoundException("Area nao encontrado nome = " + area);
+		}
+		return pais;
+	}
+	
+	
 	public Pais insert(Pais pais) {
 		pais.setId(null);
 		return repo.save(pais);

@@ -25,8 +25,8 @@ public class DevChallengeApplication  implements CommandLineRunner{
 		// TODO Auto-generated method stub
 				
 		
-		Pais moz = new Pais(null, "Mozambique", "Maputo", "sul", "sudeste", "Baixa");
-		Pais rsa = new Pais(null, "South Africa", "NelsPruit", "sul", "sudeste", "Mpumalanga");
+		Pais moz = new Pais(null, "Mozambique", "Maputo", "Sul", "Sudeste", "Baixa");
+		Pais rsa = new Pais(null, "South Africa", "NelsPruit", "Norte", "Nordeste", "Mpumalanga");
 
 		
 		
