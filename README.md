@@ -17,13 +17,15 @@ Java 11 e Spring Boot 2
 
 # Endpoints
 
+URL: https://dev-challenge-dercio.herokuapp.com
+
 POST /paises
 
-GET /Paises /Paises/{id} /Paises/{nome} /Paises/{capital} /Paises/{regiao} /Paises/{subregiao} /Paises/{area}
+GET /paises /paises/{id} /paises/{nome} /paises/{capital} /paises/{regiao} /paises/{subregiao} /paises/{area}
 
-PUT /Paises/{id}
+PUT /paises/{id}
 
-DELETE /Paises/{id}
+DELETE /paises/{id}
 
 Paginacao {url}/page?linesPerPage=?&page=?&direction=?
 
